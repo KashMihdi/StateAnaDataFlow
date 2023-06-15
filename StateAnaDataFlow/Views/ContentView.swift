@@ -16,6 +16,7 @@ struct ContentView: View {
             Text("Hi, \(user.name)!")
                 .font(.largeTitle)
                 .padding(.top, 100)
+            
             Text(timer.counter.formatted())
                 .font(.largeTitle)
                 .padding(.top, 100)
@@ -39,6 +40,7 @@ struct ContentView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(.black, lineWidth: 4)
             }
+            
             Spacer()
         }
     }

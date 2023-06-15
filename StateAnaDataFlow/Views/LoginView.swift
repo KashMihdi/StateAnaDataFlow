@@ -16,8 +16,11 @@ struct LoginView: View {
             HStack {
                 TextField("Enter your name...", text: $name)
                     .multilineTextAlignment(.center)
+                
                 Text(name.count.formatted())
-                    .foregroundColor(user.checkCorrectName(name: name) ? .red : .green)
+                    .foregroundColor(
+                        user.checkCorrectName(name: name) ? .red : .green
+                    )
                     .padding(.all, 4)
                     .overlay {
                         RoundedRectangle(cornerRadius: 4)
@@ -25,6 +28,7 @@ struct LoginView: View {
                     }
             }
             .padding(.horizontal, 30)
+            
             Button(action: login) {
                 HStack {
                     Image(systemName: "checkmark.circle")

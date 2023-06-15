@@ -47,8 +47,6 @@
 		A88811452A3A1FFC00A4487D = {
 			isa = PBXGroup;
 			children = (
-				FDEE376F2A3B5AAD00D5A236 /* StorageManager.swift */,
-				FDEE37712A3B64BD00D5A236 /* User.swift */,
 				A88811502A3A1FFC00A4487D /* StateAnaDataFlow */,
 				A888114F2A3A1FFC00A4487D /* Products */,
 			);
@@ -65,13 +63,11 @@
 		A88811502A3A1FFC00A4487D /* StateAnaDataFlow */ = {
 			isa = PBXGroup;
 			children = (
-				A88811512A3A1FFC00A4487D /* StateAnaDataFlowApp.swift */,
-				A88811532A3A1FFC00A4487D /* ContentView.swift */,
-				A88811612A3A3F0100A4487D /* LoginView.swift */,
-				A88811652A3A411000A4487D /* RootView.swift */,
-				A888115F2A3A388800A4487D /* TimeCounter.swift */,
-				A88811632A3A3FE800A4487D /* UserSettings.swift */,
-				A88811552A3A1FFD00A4487D /* Assets.xcassets */,
+				FDA85CFB2A3B79DC002AEC8A /* Views */,
+				FDA85CFD2A3B7A33002AEC8A /* Services */,
+				FDA85CFE2A3B7A41002AEC8A /* Models */,
+				FDA85CFC2A3B79F8002AEC8A /* App */,
+				FDA85CFF2A3B7A51002AEC8A /* Resurces */,
 				A88811572A3A1FFD00A4487D /* Preview Content */,
 			);
 			path = StateAnaDataFlow;
@@ -83,6 +79,50 @@
 				A88811582A3A1FFD00A4487D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDA85CFB2A3B79DC002AEC8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A88811652A3A411000A4487D /* RootView.swift */,
+				A88811612A3A3F0100A4487D /* LoginView.swift */,
+				A88811532A3A1FFC00A4487D /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDA85CFC2A3B79F8002AEC8A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A88811512A3A1FFC00A4487D /* StateAnaDataFlowApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FDA85CFD2A3B7A33002AEC8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A888115F2A3A388800A4487D /* TimeCounter.swift */,
+				A88811632A3A3FE800A4487D /* UserSettings.swift */,
+				FDEE376F2A3B5AAD00D5A236 /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FDA85CFE2A3B7A41002AEC8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDEE37712A3B64BD00D5A236 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDA85CFF2A3B7A51002AEC8A /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				A88811552A3A1FFD00A4487D /* Assets.xcassets */,
+			);
+			path = Resurces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
