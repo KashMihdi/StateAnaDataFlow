@@ -8,15 +8,15 @@
 import Foundation
 
 final class UserSettings: ObservableObject {
-    @Published var isLoggedIn = false
-    var name = ""
+    @Published var user: User
+    lazy var isLoggedIn = user.isLogIn
+    lazy var name = user.name
     
     init() {
-        name = StorageManager().username
-        isLoggedIn = StorageManager().isLoggedIn
+        user = StorageManager().getUser()
     }
     
     func checkCorrectName(name: String) -> Bool {
-        return name.count > 2 ? false : true
+         name.count > 2 ? false : true
     }
 }

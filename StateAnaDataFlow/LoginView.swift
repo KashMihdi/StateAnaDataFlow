@@ -39,7 +39,7 @@ struct LoginView: View {
         if !name.isEmpty {
             user.name = name
             user.isLoggedIn.toggle()
-            storage.createUser(username: name)
+            storage.createUser(name: name)
         }
     }
 }

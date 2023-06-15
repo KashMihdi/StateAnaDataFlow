@@ -13,18 +13,18 @@ class StorageManager: ObservableObject {
     @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
     
     // create
-    func createUser(username: String) {
-        self.username = username
+    func createUser(name: String) {
+        username = name
         isLoggedIn = true
     }
     
     // read
-    func getUser()  {
-        
+    func getUser() -> User  {
+        User(name: username, isLogIn: isLoggedIn)
     }
     
     // delete
-    func deleteUser() {
+    func deleteUser()  {
         username = ""
         isLoggedIn = false
     }

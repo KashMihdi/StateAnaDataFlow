@@ -12,7 +12,7 @@ struct RootView: View {
     @StateObject private var storage = StorageManager()
     var body: some View {
         Group {
-            if storage.isLoggedIn {
+            if user.isLoggedIn {
                 ContentView()
             } else {
                 LoginView()
