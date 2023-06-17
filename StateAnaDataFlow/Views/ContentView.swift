@@ -13,7 +13,7 @@ struct ContentView: View {
     @EnvironmentObject private var storage: StorageManager
     var body: some View {
         VStack {
-            Text("Hi, \(user.name)!")
+            Text("Hi, \(storage.username)!")
                 .font(.largeTitle)
                 .padding(.top, 100)
             
@@ -45,8 +45,6 @@ struct ContentView: View {
         }
     }
     private func logOut() {
-        user.name = ""
-        user.isLoggedIn = false
         storage.deleteUser()
     }
 }

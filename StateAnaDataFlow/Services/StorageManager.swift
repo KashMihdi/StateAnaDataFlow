@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-class StorageManager: ObservableObject {
-    
-    @AppStorage("username") var username = ""
-    @AppStorage("isLoggedIn") var isLoggedIn = false
+final class StorageManager: ObservableObject {
+
+     @AppStorage(wrappedValue: "", "name") var username: String
+     @AppStorage(wrappedValue: false, "isLoggedIn") var isLoggedIn: Bool
     
     // create
     func createUser(name: String) {
@@ -28,5 +28,4 @@ class StorageManager: ObservableObject {
         username = ""
         isLoggedIn = false
     }
-    
 }
