@@ -19,7 +19,7 @@ struct LoginView: View {
                 
                 Text(name.count.formatted())
                     .foregroundColor(
-                        user.checkCorrectName(name: name) ? .red : .green
+                        user.checkCorrectName(name: name) ? .green : .red
                     )
                     .padding(.all, 4)
                     .overlay {
@@ -35,16 +35,15 @@ struct LoginView: View {
                     Text("OK")
                 }
             }
-            .disabled(user.checkCorrectName(name: name))
+            .disabled(!user.checkCorrectName(name: name))
         }
     }
     
     private func login() {
-        if !name.isEmpty {
-            user.name = name
-            user.isLoggedIn.toggle()
-            storage.createUser(name: name)
-        }
+        user.name = name
+        user.isLoggedIn.toggle()
+        storage.createUser(name: name)
+        
     }
 }
 

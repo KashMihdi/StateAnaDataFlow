@@ -17,6 +17,6 @@ final class UserSettings: ObservableObject {
     }
     
     func checkCorrectName(name: String) -> Bool {
-         name.count > 2 ? false : true
+         name.count > 2
     }
 }
